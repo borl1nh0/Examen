@@ -1,0 +1,8 @@
+<h1>Filtrar Coches</h1>
+{% if coches %}
+    {% for c in coches %}
+        <p>{{ c.marca.nombre }} {{ c.modelo }} — {{ c.precio_base }} € — Año: {{ c.anyo_lanzamiento }}</p>
+    {% endfor %}
+{% else %}
+    <p>No hay coches que cumplan los filtros.</p>
+{% endif %}

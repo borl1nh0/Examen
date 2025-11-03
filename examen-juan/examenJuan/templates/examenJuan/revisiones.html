@@ -1,0 +1,8 @@
+<h1>Revisiones</h1>
+{% if revisiones %}
+    {% for r in revisiones %}
+        <p>{{ r.coche.marca.nombre }} {{ r.coche.modelo }} — {{ r.itv.centro }} ({{ r.itv.ciudad }}) — {{ r.kilometraje }} km — {% if r.aprobada %}Aprobada{% else %}No aprobada{% endif %}</p>
+    {% endfor %}
+{% else %}
+    <p>No hay revisiones registradas.</p>
+{% endif %}
